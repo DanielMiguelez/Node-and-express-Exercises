@@ -9,4 +9,6 @@ router.get('/showProducts',ProductController.showProduct);
 router.get('/selectFromId/:id',ProductController.selectFromId);
 router.get('/selectDesc',ProductController.selectDesc);
 router.get('/selectProductsByName/:name', ProductController.selectProductsByName);
-router.get('/deleteProductsById/:id',ProductController.deleteproductsById);
+router.delete('/deleteProductsById/:id',ProductController.deleteProductsById);
+
+module.exports = router

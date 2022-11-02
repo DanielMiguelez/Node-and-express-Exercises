@@ -21,7 +21,7 @@ app.get("/createtablecategories", (req, res) => {
     let sql =
       "CREATE TABLE categories(id int AUTO_INCREMENT,name VARCHAR(255), PRIMARY KEY(id))";
     db.query(sql, (err, result) => {
-      if (err) throw err;
+      if (err) throw err; 
       console.log(result);
       res.send("Categories table created...");
     });

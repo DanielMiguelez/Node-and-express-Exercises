@@ -28,5 +28,13 @@ const CategoryController = {
     })
     },
 
-    
+    deleteCategoriesById (req, res)  {
+      let sql = ` DELETE FROM products WHERE id ='${req.params.id}'`;
+      db.query(sql, (err, result) => {
+      if (err) throw err;
+      res.send("Category deleted...");
+      })
+      },
 }
+
+module.exports = CategoryController

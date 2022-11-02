@@ -37,7 +37,7 @@ const ProductController = {
         },
     
     selectDesc (req, res) {
-        let sql = `SELECT * FROM products ORDER BY id DESC`;
+        let sql = `SELECT * FROM products ORDER BY price DESC`;
         db.query(sql, (err, result) => {
         if (err) throw err;
         res.send(result);
@@ -61,5 +61,5 @@ const ProductController = {
         },
 }
 
-
+module.exports =  ProductController
 
